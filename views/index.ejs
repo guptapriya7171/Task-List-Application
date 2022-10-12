@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= title %></title>
+    <script
+      src="https://kit.fontawesome.com/7f59543e37.js"
+      crossorigin="anonymous"
+    ></script>
+   <link rel="stylesheet" href="/css/index.css">
+  </head>
+  <body>
+    <div class="AppBox">
+      
+      <h1><i class="fa-solid fa-clipboard-list"></i>&nbsp;&nbsp;TODO APP</h1>
+      <hr />
+      <form action="/addOne" method="POST">
+        <h4>DESCRIPTION</h4>
+        <input
+          id="desc"
+          type="text"
+          method="POST"
+          name="description"
+          placeholder="What do you need to do?"
+          required
+        />
+        <hr />
+        <div id="thirdRow">
+          <div class="dropdown">
+            <label for="options"><h4>CATEGORY</h4></label>
+            <SELECT id="options" name="type">
+              <option>School</option>
+              <option>Work</option>
+              <option>Official</option>
+              <option>Home</option>
+            </SELECT>
+          </div>
+          <div class="vl"></div>
+          <div class="date">
+            <h4>DUE DATE</h4>
+            <input id="taskdate" type="date" name="taskday" />
+          </div>
+          <br />
+        </div>
+
+        <hr />
+        <div id="buttons" type="submit">
+          <button class="btn success">
+            <i class="fa-sharp fa-solid fa-plus" style="margin-right: 3px"></i
+            >ADD TASK
+          </button>
+          
+        </div>
+      </form>
+      <hr />
+
+      <div id ="list">
+        <ul>
+          <% for(let i of TasksList) { %>
+          <li id="unorderedList">
+            <p>
+              <input type="checkbox" name="checkbox" />
+            </p>
+            <p>
+              <i class="fa-solid fa-trash" style="margin-right: 3px"></i>
+              <a href="/delete-task/?date=<%= i.date %>">
+              Delete </a>
+            </p>
+            <p><%= i.description %></p>
+            <p><%= i.category %></p>
+            <p><i class="fa-solid fa-calendar-days"></i> 
+              &nbsp;<%= i.date %></p>
+          </li>
+          <!-- <hr /> -->
+          <% } %> %>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

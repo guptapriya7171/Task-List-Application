@@ -1,0 +1,85 @@
+body {
+    background-color: rgb(153, 105, 105);
+    font-family: "Poppins", sans-serif;
+  }
+  h1 {
+    text-align: center;
+  }
+  .AppBox {
+    margin-left: 300px;
+    margin-right: 300px;
+    padding: 18px;
+    background-color: rgb(255, 255, 255);
+  }
+  #thirdRow {
+    display: flex;
+    margin-bottom: -7px;
+  }
+  #buttons {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 18px 0px;
+  }
+
+  .btn {
+    border: none; /* Remove borders */
+    color: white; /* Add a text color */
+    padding: 14px 28px; /* Add some padding */
+    cursor: pointer; /* Add a pointer cursor on mouse-over */
+    font-weight: bold;
+  }
+  .vl {
+    border-left: 1px solid rgb(124, 129, 124);
+    height: 110px;
+    margin-top: -8px;
+    margin-left: 33%;
+    margin-right: 8px;
+  }
+  .success {
+    background-color: #48ac89;
+    width: 46%;
+  } /* Green */
+  .success:hover {
+    background-color: #15889c;
+  }
+
+  .danger {
+    background-color: white;
+    width: 30px
+
+  } /* Red */
+  
+
+  #options {
+    border: none;
+    border-color: transparent;
+  }
+  #desc {
+    border: none;
+    border-color: transparent;
+  }
+  #taskdate {
+    border: none;
+    border-color: transparent;
+  }
+  #unorderedList {
+    display: flex;
+    justify-content: space-between;
+    /* margin-left: 0px; */
+  }
+  .fa-solid{
+    color: rgb(99, 102, 102);  
+  }
+  h1{
+    color: rgb(99, 102, 102); 
+  }
+  .fa-sharp{
+     color:crimson;
+  }
+  .fa-trash{
+    color:rgba(250, 23, 68, 0.726);
+  }
+  #list{
+    margin: 0%;
+    background-color: #ebdfe1;
+  }
